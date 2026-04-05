@@ -7,10 +7,12 @@ import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import FloatingHomeButton from "./components/FloatingHomeButton";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
