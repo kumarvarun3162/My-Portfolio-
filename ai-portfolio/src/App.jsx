@@ -8,11 +8,13 @@ import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import FloatingHomeButton from "./components/FloatingHomeButton";
 import Navbar from "./components/Navbar";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <BackgroundMusic />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
