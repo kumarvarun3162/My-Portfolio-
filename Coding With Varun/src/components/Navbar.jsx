@@ -1,27 +1,62 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+const navLinks = [
+  { name: "About", path: "/about" },
+  { name: "Skills", path: "/skills" },
+  { name: "Experience", path: "/experience" },
+  { name: "Projects", path: "/projects" },
+  { name: "Contact", path: "/contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
-    <div className="fixed top-0 w-full px-5 md:px-10 py-4 md:py-6 z-50">
+    <div className="fixed top-0 w-full px-5 md:px-10 py-4 z-50">
       
+      {/* Main Row */}
       <div className="flex justify-between items-center">
         
         {/* Logo */}
-        <h1 className="text-xl md:text-3xl font-bold">
+        <motion.h1
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.05 }}
+          className="text-xl md:text-2xl font-bold cursor-pointer"
+        >
           Applied AI Developer
-        </h1>
+        </motion.h1>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-sm">
-          <Link to="/about" className="hover:text-white transition">About</Link>
-          <Link to="/skills" className="hover:text-white transition">Skills</Link>
-          <Link to="/experience" className="hover:text-white transition">Experience</Link>
-          <Link to="/projects" className="hover:text-white transition">Projects</Link>
-          <Link to="/contact" className="hover:text-white transition">Contact</Link>
+          {navLinks.map((link) => (
+            <div key={link.path} className="relative group">
+              <Link
+                to={link.path}
+                className={`transition ${
+                  location.pathname === link.path
+                    ? "text-white"
+                    : "text-white/70"
+                }`}
+              >
+                {link.name}
+              </Link>
+
+              {/* Hover underline */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+
+              {/* Active underline */}
+              {location.pathname === link.path && (
+                <motion.span
+                  layoutId="underline"
+                  className="absolute left-0 -bottom-1 w-full h-[2px] bg-white"
+                />
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Mobile Button */}
@@ -37,17 +72,32 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden mt-4 flex flex-col gap-4 bg-black/90 backdrop-blur-lg p-6 rounded-xl"
+            className="md:hidden mt-4 flex flex-col gap-4"
           >
-            <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
-            <Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link>
-            <Link to="/experience" onClick={() => setIsOpen(false)}>Experience</Link>
-            <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            {navLinks.map((link, index) => (
+              <motion.div
+                key={link.path}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.08 }}
+              >
+                <Link
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block text-lg ${
+                    location.pathname === link.path
+                      ? "text-white"
+                      : "text-white/70"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
