@@ -27,7 +27,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           className="text-xl md:text-2xl font-bold cursor-pointer"
         >
-          Applied AI Developer
+          Engineering the Future with AI
         </motion.h1>
 
         {/* Desktop Menu */}
