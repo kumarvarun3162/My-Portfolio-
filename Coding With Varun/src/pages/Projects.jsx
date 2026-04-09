@@ -37,7 +37,19 @@ const projects = [
     github: "https://github.com/kumarvarun3162/bangalore-civic-complaints-analysis",
     live: "#", 
     video: "civic-demo.mp4" 
-  }
+  },
+  {
+  id: 4,
+  title: "Earthquake Monitoring App",
+  description:
+    "Real-time earthquake tracking and visualization system.",
+  details:
+    "Fetches live earthquake data from APIs and visualizes it on interactive maps. Displays magnitude, location, and time of earthquakes with dynamic updates. Helps users monitor seismic activity globally.",
+  tech: ["Flask", "API", "Maps", "JavaScript"],
+  github: "https://github.com/kumarvarun3162/earthquake-monitoring-app",
+  live: "#",
+  video: "earthquake-demo.mp4" 
+}
 ];
 
 export default function Projects() {
