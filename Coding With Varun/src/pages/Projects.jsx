@@ -10,9 +10,9 @@ const projects = [
     details:
       "Uses ML + NLP to analyze code, detect flaws, and suggest fixes. Built for real-world deployment.",
     tech: ["Python", "ML", "Security"],
-    github: "#",
+    github: "https://github.com/kumarvarun3162/code-vulnerability-checker",
     live: "#",
-    image: "/projects/code.png",
+    video: "code-vulnerability-demo.mp4",
   },
   {
     id: 2,
@@ -24,8 +24,20 @@ const projects = [
     tech: ["React", "Django", "Maps API"],
     github: "#",
     live: "#",
-    image: "/projects/maps.png",
+    video: "maps-demo.mp4",
   },
+  {
+    id: 3,
+    title: "Bangalore Civic Complaints Analysis",
+    description:
+      "Data analysis project uncovering patterns in civic issues across Bangalore.",
+    details:
+      "Performed data cleaning, preprocessing, and visualization on civic complaint datasets to identify trends in infrastructure issues like roads, garbage, and public services. Built interactive dashboards (Power BI) to provide actionable insights.",
+    tech: ["Python", "Pandas", "Data Analysis", "Power BI"],
+    github: "https://github.com/kumarvarun3162/bangalore-civic-complaints-analysis",
+    live: "#", 
+    video: "civic-demo.mp4" 
+  }
 ];
 
 export default function Projects() {
@@ -53,10 +65,14 @@ export default function Projects() {
             className="cursor-pointer p-6 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl"
             whileHover={{ scale: 1.05 }}
           >
-            <motion.img
+            <motion.video
               layoutId={`image-${project.id}`}
-              src={project.image}
+              src={project.video}
               className="w-full h-40 object-cover rounded-xl mb-4"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
 
             <motion.h3
@@ -98,10 +114,12 @@ export default function Projects() {
                 className="w-full max-w-4xl bg-black/90 border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
               >
                 {/* Image */}
-                <motion.img
+                <motion.video
                   layoutId={`image-${selected.id}`}
-                  src={selected.image}
+                  src={selected.video}
                   className="w-full h-64 md:h-80 object-cover"
+                  controls
+                  autoPlay
                 />
 
                 <div className="p-6 md:p-8">
