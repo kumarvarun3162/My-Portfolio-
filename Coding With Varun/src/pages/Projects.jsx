@@ -49,6 +49,18 @@ const projects = [
   github: "https://github.com/kumarvarun3162/earthquake-monitoring-app",
   live: "#",
   video: "earthquake-demo.mp4" 
+},
+{
+  id: 5,
+  title: "Activation Function Visualizer",
+  description:
+    "Interactive visualization of neural network activation functions.",
+  details:
+    "Built an interactive tool to visualize popular activation functions like ReLU, Sigmoid, and Tanh in real-time. Helps understand how neural networks learn by showing function behavior graphically with dynamic inputs.",
+  tech: ["Python", "Matplotlib", "FastAPI", "Machine Learning", "Plotly JS"],
+  github: "https://github.com/kumarvarun3162/Activation-Function-Visualizer",
+  live: "#",
+  video: "activation-demo.mp4"
 }
 ];
 
