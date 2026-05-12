@@ -29,7 +29,7 @@ export default function Contact() {
           from_email: form.email,
           message: form.message,
         },
-        "Xx2nfUJCMFh9B9srS" // ✅ your public key
+        "cnMltIfu0L9iQMq22" // ✅ your public key
       )
       .then(
         () => {
