@@ -11,7 +11,7 @@ const projects = [
       "Uses ML + NLP to analyze code, detect flaws, and suggest fixes. Built for real-world deployment.",
     tech: ["Python", "ML", "Security"],
     github: "https://github.com/kumarvarun3162/code-vulnerability-checker",
-    live: "#",
+    live: "https://code-vulnerability-checker.onrender.com/",
     video: "code-vulnerability-demo.mp4",
   },
   {
