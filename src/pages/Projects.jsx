@@ -16,15 +16,15 @@ const projects = [
   },
   {
     id: 2,
-    title: "Smart Delivery Location Manager",
+    title: "Code Review MCP Server",
     description:
-      "Precise delivery tracking using smart location IDs.",
+      "AI-powered MCP server for intelligent code review, vulnerability detection, and contextual developer feedback.",
     details:
-      "Google Maps based system with real-time tracking and optimized routes.",
-    tech: ["React", "Django", "Maps API"],
-    github: "#",
+      " Developed a Model Context Protocol (MCP) server that integrates AI-driven code analysis, security vulnerability detection, and automated review suggestions into modern developer workflows.",
+    tech: ["FastAPI", "MCP", "LangGraph", "AI"],
+    github: "https://github.com/kumarvarun3162/CodeReview-MCP.git",
     live: "#",
-    video: "maps-demo.mp4",
+    video: "CodeReview-MCP.mp4",
   },
   {
     id: 3,
