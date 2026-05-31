@@ -61,6 +61,26 @@ const projects = [
   github: "https://github.com/kumarvarun3162/Activation-Function-Visualizer",
   live: "#",
   video: "activation-demo.mp4"
+},
+{
+  id: 6,
+  title: "Intelligent Business Analytics Platform",
+  description:
+    "End-to-end data analytics platform that transforms raw, messy data into actionable business insights with AI-narrated reports.",
+  details:
+    "Built a full-stack analytics platform where users upload raw CSV, Excel, or JSON files and the system automatically runs an 8-stage data cleaning pipeline (handling nulls, duplicates, outliers, type inference), feature engineering (encoding, scaling, binning, derived features), statistical analysis (EDA, PCA, correlation matrices, hypothesis testing), and generates an interactive Plotly dashboard with 8 chart types. The platform uses Groq's Llama 3.3 70B model to generate professional PDF reports with narrative sections like executive summary, key findings, and ML readiness assessment. Includes a real-time SSE streaming report generator, downloadable ML-ready CSV, and a data passport JSON for full pipeline reproducibility.",
+  tech: [
+    "React",
+    "Plotly.js",
+    "FastAPI",
+    "Scikit-learn",
+    "Groq API",
+    "SQLite",
+    "Render"
+  ],
+  github: "https://github.com/kumarvarun3162/Intelligent-Business-Analytics-Platform",
+  live: "https://intelligent-business-analytics-platform.onrender.com",
+  video: "ibap-demo.mp4"
 }
 ];
 
