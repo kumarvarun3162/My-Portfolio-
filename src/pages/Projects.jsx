@@ -59,7 +59,7 @@ const projects = [
     "Built an interactive tool to visualize popular activation functions like ReLU, Sigmoid, and Tanh in real-time. Helps understand how neural networks learn by showing function behavior graphically with dynamic inputs.",
   tech: ["Python", "Matplotlib", "FastAPI", "Machine Learning", "Plotly JS"],
   github: "https://github.com/kumarvarun3162/Activation-Function-Visualizer",
-  live: "#",
+  live: "https://activation-function-visualizer.onrender.com/",
   video: "activation-demo.mp4"
 },
 {
